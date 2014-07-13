@@ -32,6 +32,6 @@
 		<exec command="php /usr/local/bin/zs-client.phar addTarget --target='debian_renato' --zskey='zfapi' --zssecret='3e78c07c9e5c2cdbd1993f5dbfb9e01a3f585b2daddd1c755ce782f1fb6e0a19' --zsurl='http://localhost:10081' --zsversion='6.3'" checkreturn="true" />
 	</target>
 	<target name="deploy" depends="ztarget">
-		<exec command="php /usr/local/bin/zs-client.phar installApp --zpk='/home/renato/Zend/workspaces/ZF2CourseWorkspace/testproject/application.zpk' --baseUri='http://jenkins/testprojectdeployjenkins' --userAppName='testtestprojectdeploy' --target='debian_renato'" checkreturn="true" />
+		<exec command="php /usr/local/bin/zs-client.phar installApp --zpk='${project.basedir}/application.zpk' --baseUri='http://jenkins/testprojectdeployjenkins' --userAppName='testtestprojectdeploy' --target='debian_renato'" checkreturn="true" />
 	</target>
 </project>
