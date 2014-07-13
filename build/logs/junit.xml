@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="skeleton_php_project" tests="6" assertions="8" failures="0" errors="0" time="0.072154">
+    <testsuite name="Tests\Functional\Acme\AgilecylWebTest" file="/home/renato/Zend/workspaces/ZF2CourseWorkspace/testdeploy/tests/functional/AgilecylWebTest.php" namespace="Tests\Functional\Acme" fullPackage="Tests.Functional.Acme" tests="0" assertions="0" failures="0" errors="0" time="0.000000"/>
+    <testsuite name="Tests\Functional\Acme\GooglePucelaTestingDaysTest" file="/home/renato/Zend/workspaces/ZF2CourseWorkspace/testdeploy/tests/functional/GooglePucelaTestingDaysTest.php" namespace="Tests\Functional\Acme" fullPackage="Tests.Functional.Acme" tests="0" assertions="0" failures="0" errors="0" time="0.000000"/>
+    <testsuite name="Tests\Functional\Acme\WebTest" file="/home/renato/Zend/workspaces/ZF2CourseWorkspace/testdeploy/tests/functional/WebTest.php" namespace="Tests\Functional\Acme" fullPackage="Tests.Functional.Acme" tests="0" assertions="0" failures="0" errors="0" time="0.000000"/>
+    <testsuite name="Acme\MyGuestbookTest" file="/home/renato/Zend/workspaces/ZF2CourseWorkspace/testdeploy/tests/integration/Acme/MyGuestbookTest.php" namespace="Acme" fullPackage="Acme" tests="1" assertions="1" failures="0" errors="0" time="0.023065">
+      <testcase name="testNoGetDataSet" class="Acme\MyGuestbookTest" file="/home/renato/Zend/workspaces/ZF2CourseWorkspace/testdeploy/tests/integration/Acme/MyGuestbookTest.php" line="35" assertions="1" time="0.023065"/>
+    </testsuite>
+    <testsuite name="Acme\DependencyInjectionTest" file="/home/renato/Zend/workspaces/ZF2CourseWorkspace/testdeploy/tests/unit/Acme/DependencyInjectionTest.php" namespace="Acme" fullPackage="Acme" tests="1" assertions="1" failures="0" errors="0" time="0.001897">
+      <testcase name="initialParamValue" class="Acme\DependencyInjectionTest" file="/home/renato/Zend/workspaces/ZF2CourseWorkspace/testdeploy/tests/unit/Acme/DependencyInjectionTest.php" line="19" assertions="1" time="0.001897"/>
+    </testsuite>
+    <testsuite name="Acme\DummyTest" file="/home/renato/Zend/workspaces/ZF2CourseWorkspace/testdeploy/tests/unit/Acme/DummyTest.php" namespace="Acme" fullPackage="Acme" tests="1" assertions="1" failures="0" errors="0" time="0.001460">
+      <testcase name="sayHelloFabien" class="Acme\DummyTest" file="/home/renato/Zend/workspaces/ZF2CourseWorkspace/testdeploy/tests/unit/Acme/DummyTest.php" line="15" assertions="1" time="0.001460"/>
+    </testsuite>
+    <testsuite name="Acme\PointOfSaleMockTest" file="/home/renato/Zend/workspaces/ZF2CourseWorkspace/testdeploy/tests/unit/Acme/PointOfSaleMockTest.php" namespace="Acme" fullPackage="Acme" tests="1" assertions="1" failures="0" errors="0" time="0.019324">
+      <testcase name="onBarcode_search_catalog" class="Acme\PointOfSaleMockTest" file="/home/renato/Zend/workspaces/ZF2CourseWorkspace/testdeploy/tests/unit/Acme/PointOfSaleMockTest.php" line="15" assertions="1" time="0.019324"/>
+    </testsuite>
+    <testsuite name="Acme\TemperatureStubTest" file="/home/renato/Zend/workspaces/ZF2CourseWorkspace/testdeploy/tests/unit/Acme/TemperatureStubTest.php" namespace="Acme" fullPackage="Acme" tests="2" assertions="4" failures="0" errors="0" time="0.026409">
+      <testcase name="simpleStubWithPHPUnit" class="Acme\TemperatureStubTest" file="/home/renato/Zend/workspaces/ZF2CourseWorkspace/testdeploy/tests/unit/Acme/TemperatureStubTest.php" line="12" assertions="2" time="0.007825"/>
+      <testcase name="simpleStubWithMockery" class="Acme\TemperatureStubTest" file="/home/renato/Zend/workspaces/ZF2CourseWorkspace/testdeploy/tests/unit/Acme/TemperatureStubTest.php" line="22" assertions="2" time="0.018584"/>
+    </testsuite>
+  </testsuite>
+</testsuites>
