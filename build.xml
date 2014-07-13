@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project basedir="." default="unittest" name="testjenkinsproject">
+	<property name="source" value="src"/>
+    <property name="tests" value="${basedir}/tests/"/>
+    <target description="Clean up and create artifact directories" name="clean">
+        <delete dir="${basedir}/build/api"/>
+        <delete dir="${basedir}/build/code-browser"/>
+        <delete dir="${basedir}/build/coverage"/>
+        <delete dir="${basedir}/build/logs"/>
+        <delete dir="${basedir}/build/pdepend"/>
+        <mkdir dir="${basedir}/build/api"/>
+        <mkdir dir="${basedir}/build/code-browser"/>
+        <mkdir dir="${basedir}/build/coverage"/>
+        <mkdir dir="${basedir}/build/logs"/>
+        <mkdir dir="${basedir}/build/pdepend"/>
+    </target>
+     <target description="Run unit tests using PHPUnit and generates junit.xml and clover.xml" name="unittest">
+        <exec executable="${project.basedir}/bin/phpunit" logoutput="true" checkreturn="1">
+            <arg line="-c ${project.basedir}/${tests}/phpunit-codecoverage.xml.dist"/>
+        </exec>
+    </target>
+	<target name="zpk" depends="unittest">
+		<exec
+			command="php /usr/local/bin/zs-client.phar packZpk --folder='${project.basedir}' --destination='${project.basedir}' --name='application.zpk'"
+			checkreturn="true" />
+	</target>
+	<target name="ztarget" depends="zpk">
+		<exec command="php /usr/local/bin/zs-client.phar addTarget --target='debian_renato' --zskey='zfapi' --zssecret='3e78c07c9e5c2cdbd1993f5dbfb9e01a3f585b2daddd1c755ce782f1fb6e0a19' --zsurl='http://localhost:10081' --zsversion='6.3'" checkreturn="true" />
+	</target>
+	<target name="deploy" depends="ztarget">
+		<exec command="php /usr/local/bin/zs-client.phar installApp --zpk='/home/renato/Zend/workspaces/ZF2CourseWorkspace/testdeploy/application.zpk' --baseUri='http://jenkins/testdeployjenkins' --userAppName='testdeploy' --target='debian_renato'" checkreturn="true" />
+	</target>
+</project>
